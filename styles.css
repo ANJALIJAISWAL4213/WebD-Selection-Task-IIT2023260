@@ -1,0 +1,171 @@
+/* Basic Reset */
+body, h1, h2, h3, h4, p, button, input, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #aaa;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"], select {
+    width: 100%;
+}
+
+#accordion-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.panel-content {
+    padding: 10px;
+}
+
+.question {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.question.checked {
+    background-color: #d4edda; /* Green background for completed questions */
+}
+
+.question input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.question .bookmark-button {
+    margin-left: auto;
+    background-color: transparent;
+    border: 1px solid #007bff; /* Default border color */
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff; /* Default color */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.question .bookmark-button.bookmarked {
+    background-color: red; /* Background color when bookmarked */
+    color: #fff; /* Text color when bookmarked */
+    border-color: red; /* Border color when bookmarked */
+}
+
+#progress-container {
+    margin-top: 20px;
+}
+
+#progress-bar {
+    height: 20px;
+    background-color: #007bff;
+    width: 0;
+    border-radius: 5px;
+}
+
+#progress-text {
+    margin-top: 5px;
+}
+
+#bookmarks-link {
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Mobile-first styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .accordion {
+        font-size: 14px;
+    }
+
+    .question {
+        font-size: 14px;
+    }
+}
+
+/* Swipe functionality */
+.swipe-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.swipe-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.swipe-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}

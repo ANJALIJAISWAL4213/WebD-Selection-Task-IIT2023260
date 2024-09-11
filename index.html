@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        <input type="text" id="search-bar" placeholder="Search...">
+
+        <div id="swipe-container" class="swipe-container">
+            <div id="accordion-container" class="swipe-content"></div>
+        </div>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+            <div id="progress-text">0% Completed</div>
+        </div>
+
+        <div>
+            <h3>Add New Category</h3>
+            <input type="text" id="new-category-title" placeholder="Category Title">
+            <button id="add-category-button">Add Category</button>
+        </div>
+
+        <div>
+            <h3>Add New Question</h3>
+            <input type="text" id="new-question-title" placeholder="Question Title">
+            <input type="text" id="new-question-tags" placeholder="Tags (comma separated)">
+            <input type="text" id="new-question-yt-link" placeholder="YouTube Link">
+            <input type="text" id="new-question-p1-link" placeholder="Practice Problem 1 Link">
+            <input type="text" id="new-question-p2-link" placeholder="Practice Problem 2 Link">
+            <select id="category-select"></select>
+            <button id="add-question-button">Add Question</button>
+        </div>
+
+        <a id="bookmarks-link">Show Bookmarked Questions</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
